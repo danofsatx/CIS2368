@@ -1,0 +1,12 @@
+.navBar{
+    display:table;
+    margin:5px auto; text-align:center;
+    border-bottom:2px solid #D4A460;
+    font-family:Impact, Charcoal, sans-serif;
+    }
+
+.navText a{
+    text-decoration: none;
+    margin-right: 10px;
+    color:#FFFFE0;
+}

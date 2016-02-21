@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Quotes and Code</title>
+</head>
+<body style="background-color:#A0522D; color:#FFDEAD;">
+    <style>
+    a:link {color:#FFFFE0;}
+    a:visited {color:#FFA07A}
+    </style>
+    <div style="display:table; border-bottom:2px solid #D4A460; margin:0 auto; text-align:center; font-family:Impact, Charcoal, sans-serif;">
+    <nav>
+        <a href="index.html" style="text-decoration:none; margin-right:10px; color:#FFFFE0">&#x26AC; Home</a>
+        <a href="assignment3.html" style="text-decoration:none; margin-right:10px; color:#FFFFE0">&#x26AC; Styles and Semantics</a>
+        <a href="assignment4.html" style="text-decoration:none; margin-right:10px; color:#FFFFE0;">&#x26AC; Quotes and Code</a>
+        <a href="assignment5.html" style="text-decoration:none; margin-right:10px; color:#FFFFE0;">&#x26AC; Images</a>
+        <a href="assignment6.html" style="text-decoration:none; margin-right:10px; color:#FFFFE0;">&#x26AC; Tables</a>
+        <a href="assignment7.html" style="text-decoration:none; margin-right:10px; color:#FFFFE0;">&#x26AC; Structures</a>
+        <a href="assignment8.html" style="text-decoration:none; margin-right:10px; color:#FFFFE0;">&#x26AC; Layout</a>
+    </nav>
+    </div>
+    <h1><a id="inline">Inline Quotes</a></h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium lobortis nulla ut tincidunt. Donec nec cursus quam, sed fringilla nisi. Sed arcu lectus, pharetra et finibus eu, congue euismod sem. <q>Duis eget diam sagittis, posuere erat eget, laoreet nisi. Nulla vitae posuere dui.</q> Phasellus quis tellus sit amet massa euismod ornare nec at massa.</p>
+    <h2><a id="blockquotes">Blockquotes</a></h2>
+    <p>In malesuada sed lectus at luctus. Quisque quis eleifend arcu. Duis malesuada sollicitudin gravida. Morbi placerat eu enim et venenatis. Fusce eu placerat nisi, convallis consequat risus. Nullam sit amet tincidunt velit:</p>
+    <blockquote>Aenean commodo ornare ultrices. Curabitur eleifend fringilla ante, in commodo nisi condimentum ut. Suspendisse nibh nisi, imperdiet sed interdum ut, pulvinar sed mi. Nam interdum egestas augue, in auctor erat porta non. Donec lobortis, diam vel lobortis tristique, quam nisl luctus purus, eget iaculis mi nunc sed tellus. Vivamus accumsan ligula eget nisl laoreet interdum. Pellentesque urna purus, blandit at venenatis at, facilisis non arcu. </blockquote>
+    <h2 style="color:#FFDEAD">Fun and Useful Tags</h2>
+    <p><cite>Agustus Ceasar</cite> ac arcu eget dui maximus volutpat. Mauris vestibulum maximus dolor, ut rhoncus lacus tristique di <abbr title="Istituto Italiano di Scienze Umane">SUM</abbr> a:<br>
+        <address> P.zza S.Marco, 4<br>
+        50121 Firenze</address></p>
+    <p><bdo dir="rtl">If you can read this, you are one of only 10% of the world population. Congratulations!</bdo></p>
+    <h2><a id="art">Fun with ASCII</a></h3>
+    <p>Here, have a frosty one on us!</p>
+    <pre style="font-family:courier">
+         _.._..,_,_
+        (          )
+         ]~,"-.-~~[
+       .=])' (;  ([
+       | ]:: '    [
+       '=]): .)  ([
+         |:: '    |
+          ~~----~~
+
+        </pre>
+    <h2><a id="code">Some code examples</h2>
+    <p>I am in the process of learning the <a href="https://www.python.org" target="_blank">Python</a> scripting language. Here is my first attempt at a GeoIP plugin for firewalld which can be cloned from my <a href="https://github.com/danofsatx/geoipset" target="_blank">github account</a>:</p>
+    <pre>
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+# TODO:  Define variables
+#        Bring in IP address from input
+#        Get set names from ipset
+#        return output to main
+from dnf.pycomp import raw_input
+from subprocess import check_output, CalledProcessError, getoutput
+
+#def get_ipaddress():
+ipaddr = raw_input("Enter IP address: ")
+#    return ipaddr
+
+#def get_ipsets():
+testset = getoutput("ipset list -n")
+#    return testset
+
+#def check_sets(ipaddr, testset):
+for ipset in testset:
+    check_output(["/sbin/ipset", "-q", "test", "%s", "%s"]) % (ipset, ipaddr)
+    if CalledProcessError == 0:
+        #print "The IP is in the set." % (ipaddr, ipset)
+        print("%s is in set %s.") % (ipaddr, ipset)
+        break
+    else:
+            print("%s is not blocked.") % (ipaddr)
+
+
+#check_sets(get_ipaddress(),get_ipsets())
+
+"""try:
+    output = check_output("/sbin/ipset", "-q", "test", "%s", "%s") %(testset,ipaddr)
+except CalledProcessError as e:
+    print(e.returncode)"""</pre>
+    <h2><a id="links">Some Hyperlink Examples</h2>
+    <p>First, lets hop around on the page:</p>
+    <ul><li>Let's take a look at the <a href="#inline">inline quote</a> paragraph
+        <li>Or maybe the <a href="#blockquotes">blockquote</a> para
+        <li>Did you like the <a href="#art">ASCII art</a>?</ul>
+    <p>Now, if you look at the <a href="#nav">navigation menu</a> at the top of this page, you'll see links to other pages on this site.</p>
+    <p>One of my volunteer activities is supporting the <a href="https://start.fedoraproject.org/" target="_blank">Fedora Project</a>, an <dfn>Open Source</dfn> operating system sponsored by <a href="https://www.redhat.com/" target="_blank">Red Hat</a>, a multi-billion dollar company.</p>
+</body>
+</html>

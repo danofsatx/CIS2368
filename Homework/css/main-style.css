@@ -1,0 +1,59 @@
+*{
+    /* This is to cancel out browser style sheets */
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    /* fixes an old IE bug in font size processing */
+    font-size: 100%;
+}
+
+body{
+    background-color: #A0522D;
+    color: #FFDEAD;
+    background-image:
+}
+
+.headStuck{
+    position: fixed;
+}
+
+a:link {
+    color:#FFFFE0;
+}
+
+a:visited {
+    color:#FFA07A;
+}
+.container{
+    width: 70%;
+}
+
+.mainContentHolder{
+    background-color: inherit;
+}
+.mainContent{
+
+}
+
+footer{
+    margin-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#footer-left{
+    float: left;
+    text-align: left;
+}
+
+#footer-right{
+    float: right;
+    text-align: right;
+}
+
+#footer-center{
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
