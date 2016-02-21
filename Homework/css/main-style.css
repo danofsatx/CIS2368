@@ -12,12 +12,11 @@ html{
 body{
     background-color: #A0522D;
     color: #FFDEAD;
-    background-image:
 }
 
-.headStuck{
+/*.headStuck{
     position: fixed;
-}
+}*/
 
 a:link {
     color:#FFFFE0;
@@ -26,21 +25,40 @@ a:link {
 a:visited {
     color:#FFA07A;
 }
+
 .container{
     width: 70%;
 }
 
+.padded{
+    padding: 5px;
+}
+
+.artImpact{
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 125%;
+}
 .mainContentHolder{
     background-color: inherit;
+    width: 80%;
+    margin: auto;
 }
 .mainContent{
-
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
+.mainPs{
+    padding: 5px;
+}
 footer{
     margin-top: 10px;
     padding-left: 5px;
     padding-right: 5px;
+}
+
+#headerPic{
+    margin-top: 30px;
+    width: 100%;
 }
 
 #footer-left{

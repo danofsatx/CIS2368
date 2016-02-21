@@ -1,7 +1,15 @@
+.navBarHolder{
+    width: 100%;
+    position: fixed;
+}
 .navBar{
     display:table;
+    background-color: #3d3242;
+    position: relative;;
     margin:5px auto; text-align:center;
-    border-bottom:2px solid #D4A460;
+    /* Border removed while testing floating box
+    border-bottom:2px solid #D4A460; */
+    border-radius: 8px;
     font-family:Impact, Charcoal, sans-serif;
     }
 
