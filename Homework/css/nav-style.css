@@ -1,10 +1,15 @@
 .navBarHolder{
     width: 100%;
     position: fixed;
+    top: 0px;
+    background-color: #A0522D;
+   -webkit-box-shadow: 0 4px 4px 4px #28140b;
+      -moz-box-shadow: 0 4px 4px 4px #28140b;
+        box-shadow: 0 4px 4px 4px #28140b;
 }
 .navBar{
     display:table;
-    background-color: #3d3242;
+    background-color: #3c1e11;
     position: relative;;
     margin:5px auto; text-align:center;
     /* Border removed while testing floating box
